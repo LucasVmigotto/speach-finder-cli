@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  sf-cli:
+    build:
+      context: ./docker
+    container_name: sf-cli
+    hostname: sf-cli
+    working_dir: /app
+    command: python src/sf_cli.py
+    tty: true
+    env_file: .env
+    environment:
+      PYTHONPATH: '/app/src'
+    devices:
+      - /dev/snd:/dev/snd
+    volumes:
+    - .:/app:delegated
+    - home:/home/$LOCAL_USER_NAME
+
+volumes:
+  home:
