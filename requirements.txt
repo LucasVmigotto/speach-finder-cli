@@ -1,0 +1,8 @@
+cffi==1.15.0
+pycodestyle==2.8.0
+pycparser==2.21
+pytube==12.1.0
+pytube3==9.6.4
+SpeechRecognition==3.8.1
+typing-extensions==4.2.0
+vosk==0.3.38
